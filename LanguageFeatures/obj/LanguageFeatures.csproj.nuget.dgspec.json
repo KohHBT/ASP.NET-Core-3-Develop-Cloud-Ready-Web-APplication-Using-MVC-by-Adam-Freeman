@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Huy\\Desktop\\ASP.NET\\LanguageFeatures\\LanguageFeatures.csproj": {}
+    "C:\\Users\\Huy\\Desktop\\ASP.NET Core 3 Develop Cloud-Ready Web APplication Using MVC, Blazor , and Razor Pages\\LanguageFeatures\\LanguageFeatures.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Huy\\Desktop\\ASP.NET\\LanguageFeatures\\LanguageFeatures.csproj": {
+    "C:\\Users\\Huy\\Desktop\\ASP.NET Core 3 Develop Cloud-Ready Web APplication Using MVC, Blazor , and Razor Pages\\LanguageFeatures\\LanguageFeatures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Huy\\Desktop\\ASP.NET\\LanguageFeatures\\LanguageFeatures.csproj",
+        "projectUniqueName": "C:\\Users\\Huy\\Desktop\\ASP.NET Core 3 Develop Cloud-Ready Web APplication Using MVC, Blazor , and Razor Pages\\LanguageFeatures\\LanguageFeatures.csproj",
         "projectName": "LanguageFeatures",
-        "projectPath": "C:\\Users\\Huy\\Desktop\\ASP.NET\\LanguageFeatures\\LanguageFeatures.csproj",
+        "projectPath": "C:\\Users\\Huy\\Desktop\\ASP.NET Core 3 Develop Cloud-Ready Web APplication Using MVC, Blazor , and Razor Pages\\LanguageFeatures\\LanguageFeatures.csproj",
         "packagesPath": "C:\\Users\\Huy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Huy\\Desktop\\ASP.NET\\LanguageFeatures\\obj\\",
+        "outputPath": "C:\\Users\\Huy\\Desktop\\ASP.NET Core 3 Develop Cloud-Ready Web APplication Using MVC, Blazor , and Razor Pages\\LanguageFeatures\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Huy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
