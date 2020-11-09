@@ -1,45 +1,49 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SportsStore.MyDbContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace SportsStore.Models
 {
-    public static class SeedData
+    public class SeedData
     {
         public static void EnsurePopulated(IApplicationBuilder app)
         {
-            StoreDbContext context = app.ApplicationServices
-            .CreateScope().ServiceProvider.GetRequiredService<StoreDbContext>();
-            if (context.Database.GetPendingMigrations().Any())
+            StoreDbContext _context = app.ApplicationServices
+                .CreateScope().ServiceProvider.GetRequiredService<StoreDbContext>();
+
+            if (_context.Database.GetPendingMigrations().Any()) 
             {
-                context.Database.Migrate();
+                _context.Database.Migrate();
             }
 
-            if (!context.Products.Any())
+            if(!_context.Tbl_Products.Any())
             {
-                context.Products.AddRange(
-                    new Product
-                    {
-                        Name = "Kayak", Description = "A boat for one person",
-                        Category = "Watersports", Price = 275
-                    },
+                _context.Tbl_Products.AddRange(
                     new Product
                     {
                         Name = "Kayak",
-                        Description = "Protective and fashion",
-                        Category = "Watersports", Price = 48.95m
+                        Description = "A boat for on person",
+                        Category = "WaterSports",
+                        Price = 275
+                    },
+                    new Product
+                    {
+                        Name = "Lifejacket",
+                        Description = "Protective and fashionable",
+                        Category = "Watersports",
+                        Price = 48.95m
                     },
                     new Product
                     {
                         Name = "Soccer Ball",
                         Description = "FIFA-approved size and weight",
                         Category = "Soccer",
-                        Price = 19.50m
+                        Price = 19.05m
                     },
                     new Product
                     {
@@ -84,8 +88,9 @@ namespace SportsStore.Models
                         Price = 1200
                     }
                 );
-                context.SaveChanges();
+                _context.SaveChanges();
             }
         }
+ 
     }
 }
